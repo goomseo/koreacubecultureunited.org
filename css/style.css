@@ -118,6 +118,10 @@ footer {
   gap: var(--spacing-medium);
 }
 
+.nav-right .nav-item:last-child .nav-link {
+  padding-right: var(--spacing-medium);
+}
+
 .nav-menu {
   display: flex;
   list-style: none;
@@ -132,24 +136,19 @@ footer {
   display: inline-block;
 }
 
-.nav-link {
+.nav-link,
+.dropdown-link {
   display: block;
   text-decoration: none;
   color: var(--color-text-header);
   font-size: var(--font-size-base);
-  padding: var(--spacing-small) var(--spacing-medium);
+  padding: var(--spacing-small) var(--spacing-small);
   background-color: transparent;
   cursor: pointer;
 }
 
-.nav-link:hover {
-  color: var(--color-text-header-hover);
-}
-
-.nav-item .nav-link {
+.nav-link i {
   font-size: var(--font-size-base);
-  color: var(--color-text-header);
-  vertical-align: middle;
 }
 
 .nav-item .nav-link:hover {
@@ -162,23 +161,15 @@ footer {
   line-height: 1.5;
 }
 
-.dropdown-link {
-  display: block;
-  text-decoration: none;
-  color: var(--color-text-header);
-  font-size: var(--font-size-base);
-  padding: var(--spacing-small) var(--spacing-medium);
-  background-color: transparent;
-  cursor: pointer;
-  line-height: 1.5;
-}
-
+.nav-link:hover,
 .dropdown-link:hover,
 .dropdown-link:hover .caret {
   color: var(--color-text-header-hover);
   border-top-color: var(--color-text-header-hover);
+  transition: color 0.3s ease;
 }
 
+/* 드롭다운 메뉴 기본 스타일 */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -193,6 +184,19 @@ footer {
   z-index: 1000;
   min-width: 10rem;
   white-space: nowrap;
+}
+
+/* 드롭다운 메뉴가 JavaScript로 열릴 때 표시 */
+.dropdown-menu[style='display: block;'] {
+  display: block !important;
+}
+
+/* 드롭다운 링크 hover 효과 */
+.dropdown-link:hover,
+.dropdown-link:hover .caret {
+  color: var(--color-text-header-hover);
+  border-top-color: var(--color-text-header-hover);
+  transition: color 0.3s ease;
 }
 
 .dropdown-menu li a {
