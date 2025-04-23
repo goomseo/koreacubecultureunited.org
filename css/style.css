@@ -25,13 +25,15 @@
   --font-size-base: 1rem;
   --font-size-small: 0.9rem;
 
-  --spacing-xxsmall: 0.125rem;
-  --spacing-xsmall: 0.25rem;
-  --spacing-small: 0.5rem;
+  --spacing-xxxsmall: 0.125rem;
+  --spacing-xxsmall: 0.25rem;
+  --spacing-xsmall: 0.5rem;
+  --spacing-small: 0.75rem;
   --spacing-medium: 1rem;
-  --spacing-large: 2rem;
+  --spacing-large: 1.5rem;
+  --spacing-xlarge: 2rem;
 
-  --logo-width: 2.5rem;
+  --logo-width: 3rem;
   --header-height: calc(var(--spacing-small) * 2 + var(--logo-width));
 }
 
@@ -63,11 +65,11 @@ header {
 }
 
 main {
-  margin: calc(var(--header-height) + var(--spacing-small)) var(--spacing-medium);
+  margin: calc(var(--header-height) + var(--spacing-xsmall)) var(--spacing-medium);
 }
 
 section {
-  margin-bottom: var(--spacing-large);
+  margin-bottom: var(--spacing-xlarge);
 }
 
 footer {
@@ -90,7 +92,7 @@ footer {
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 var(--spacing-medium);
+  padding: var(--spacing-xxxsmall) var(--spacing-medium) var(--spacing-xxxsmall) var(--spacing-large);
 }
 
 .logo-container:hover {
@@ -128,7 +130,7 @@ footer {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: var(--spacing-small);
+  gap: var(--spacing-xsmall);
 }
 
 .nav-item,
@@ -144,7 +146,7 @@ footer {
   text-decoration: none;
   color: var(--color-text-header);
   font-size: var(--font-size-base);
-  padding: var(--spacing-small) var(--spacing-small);
+  padding: var(--spacing-xsmall) var(--spacing-xsmall);
   cursor: pointer;
 }
 
@@ -155,7 +157,7 @@ footer {
   text-decoration: none;
   color: var(--color-text-header);
   font-size: var(--font-size-base);
-  padding: var(--spacing-small) var(--spacing-small);
+  padding: var(--spacing-xsmall) var(--spacing-xsmall);
   cursor: pointer;
 }
 
@@ -188,7 +190,7 @@ footer {
   border: 0.25px solid var(--color-border);
   border-radius: 0 0 0.3rem 0.3rem;
   list-style: none;
-  padding: var(--spacing-xsmall) 0;
+  padding: var(--spacing-xxsmall) 0;
   box-shadow: 0 0.15rem 0.25rem rgba(0, 0, 0, 0.1);
   z-index: 1000;
   min-width: 10rem;
@@ -201,7 +203,7 @@ footer {
 }
 
 .dropdown-menu li a {
-  padding: var(--spacing-xsmall) var(--spacing-medium);
+  padding: var(--spacing-xxsmall) var(--spacing-medium);
   text-decoration: none;
   color: var(--color-text-header);
   font-size: var(--font-size-small);
@@ -230,6 +232,7 @@ footer {
   border-top: none;
   border-left: none;
   transform: rotate(45deg);
+  margin-left: var(--spacing-xxxsmall);
   transition: border-color 0.3s ease;
 }
 
