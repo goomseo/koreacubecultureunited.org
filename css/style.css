@@ -13,6 +13,7 @@
   --color-text-muted-hover-dark: #212936; /* 고민 */
 
   --color-bg-default: #f9f9f9;
+  --color-bg-gray: #e0e0e0;
   --color-bg-subtle: #d8ecf4;
   --color-bg-dark: #212936;
 
@@ -218,7 +219,7 @@ img {
 }
 
 .dropdown-menu li:hover {
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-bg-gray);
 }
 
 .sr-only {
