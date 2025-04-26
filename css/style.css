@@ -379,108 +379,67 @@ main {
   background-color: var(--color-primary-dark);
 }
 
-/* MEDIA QUERY */
+/* 기본적으로 햄버거 메뉴와 헤더 숨기기 */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+/* 모바일 화면에서 햄버거 메뉴 활성화 */
 @media (max-width: 768px) {
-  /* 전체 컨테이너 너비 조정 */
-  .container {
-    width: 95%;
-    padding: 0 var(--spacing-sm);
-  }
-
-  /* 헤더 */
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: var(--spacing-sm);
-  }
-
-  .logo-container {
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-left,
-  .nav-right {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-  }
-
-  .nav-item {
-    width: 100%;
-  }
-
-  .nav-link,
-  .dropdown-toggle {
-    padding: var(--spacing-sm);
-    font-size: var(--font-size-small);
-  }
-
-  /* 드롭다운 메뉴 */
-  .dropdown-menu {
-    position: static;
+  .menu-toggle {
     display: none;
-    width: 100%;
-    margin-top: var(--spacing-xxs);
-    border: none;
-    box-shadow: none;
   }
 
-  .dropdown:hover .dropdown-menu {
+  .hamburger-menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-primary);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    z-index: 1100;
   }
 
-  /* 히어로 섹션 */
-  .hero {
-    text-align: center;
-    padding: var(--spacing-lg) var(--spacing-sm);
+  .hamburger-menu span {
+    display: block;
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: var(--color-text-white);
+    margin: 0.3rem 0;
+    transition: background-color 0.3s ease;
   }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  /* 주요 사업 섹션 */
-  .mission-list {
+  /* 기본적으로 헤더 숨기기 */
+  .header-container {
+    display: none;
     flex-direction: column;
-    gap: var(--spacing-md);
+    align-items: flex-start;
+    padding: var(--spacing-sm);
+    background-color: var(--color-bg-dark);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
-  .mission-item {
-    flex: 1 1 auto;
+  /* 햄버거 메뉴가 체크되었을 때 헤더 표시 */
+  .menu-toggle:checked ~ .header-container {
+    display: flex;
   }
 
-  /* 공지사항 섹션 */
-  .news-list li {
-    font-size: var(--font-size-small);
-  }
-
-  /* 문의 섹션 */
-  .contact {
-    padding: var(--spacing-lg) var(--spacing-sm);
-  }
-
-  .contact p {
-    font-size: var(--font-size-small);
-  }
-
-  /* 버튼 */
-  .btn {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: var(--font-size-small);
-  }
-
-  /* 푸터 */
-  footer {
-    font-size: var(--font-size-small);
-    padding: var(--spacing-md) var(--spacing-sm);
+  /* 햄버거 메뉴 버튼 hover 효과 */
+  .hamburger-menu:hover span {
+    background-color: var(--color-primary-dark);
   }
 }
