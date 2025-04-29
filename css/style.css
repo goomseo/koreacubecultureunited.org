@@ -347,49 +347,34 @@ footer a {
 
   /* 헤더 */
   .header-container {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: var(--spacing-sm);
   }
 
   .logo-container {
-    margin-bottom: var(--spacing-sm);
+    margin: 0 auto;
   }
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
+  .navbar,
   .nav-left,
   .nav-right {
-    flex-direction: column;
-    gap: var(--spacing-sm);
+    display: none;
   }
 
   .nav-item {
-    width: 100%;
+    display: none;
   }
 
   .nav-link,
   .dropdown-toggle {
-    padding: var(--spacing-sm);
-    font-size: var(--font-size-small);
+    display: none;
   }
 
   /* 드롭다운 메뉴 */
   .dropdown-menu {
-    position: static;
     display: none;
-    width: 100%;
-    margin-top: var(--spacing-xxs);
-    border: none;
-    box-shadow: none;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: flex;
-    flex-direction: column;
   }
 
   /* 히어로 섹션 */
