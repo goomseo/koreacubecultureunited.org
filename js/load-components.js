@@ -10,6 +10,5 @@ async function loadComponent(selector, file) {
   }
 }
 
-// 헤더와 푸터 로드
 loadComponent('#header', 'includes/header.html');
 loadComponent('#footer', 'includes/footer.html');

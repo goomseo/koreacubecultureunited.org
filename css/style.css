@@ -16,7 +16,6 @@
   --color-bg-lightgray: #f2f2f2;
   --color-bg-subtle: #d8ecf4;
   --color-bg-dark: #212936;
-  --color-bg-primary: #3a7ca5;
 
   --color-primary: #3a7ca5;
   --color-primary-dark: #2c5e83;
@@ -26,7 +25,6 @@
   /* or --color-accent: #6da39c; */ /* 보조 포인트를 민트톤으로 바꾸고 싶다면 */
 
   --color-border-default: #e0e0e0;
-  --color-border-muted: #cfcfcf;
 
   /* 상태 색상 */
   --color-success: #5cb85c;
@@ -151,7 +149,8 @@ img {
 }
 
 .nav-link,
-.dropdown-toggle {
+.dropdown-toggle,
+.nav-link-social {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -173,9 +172,37 @@ img {
   transition: border-color 0.3s ease;
 }
 
+.nav-item.separator {
+  width: 1px;
+  height: 1.5rem;
+  background-color: var(--color-border-default);
+  margin: 0 var(--spacing-sm);
+  align-self: center;
+}
+
 .nav-item:hover > .nav-link,
 .dropdown:hover > .dropdown-toggle {
   color: var(--color-text-main);
+}
+
+.nav-item:hover .icon-youtube {
+  color: #ff0000;
+}
+
+.nav-item:hover .icon-instagram {
+  color: #e1306c;
+}
+
+.nav-item:hover .icon-facebook {
+  color: #1877f2;
+}
+
+.nav-item:hover .icon-github {
+  color: #181717;
+}
+
+.nav-item:hover .icon-discord {
+  color: #5865f2;
 }
 
 .dropdown:hover > .dropdown-toggle::after {
@@ -244,13 +271,13 @@ img {
   border-radius: 0.3rem 0.3rem 0 0;
 }
 
-.hero .card {
+.hero .hero-article {
   padding: var(--spacing-lg);
   border-radius: 0 0 0.3rem 0.3rem;
   border: 0.1rem solid var(--color-border-default);
 }
 
-.hero .card h1 {
+.hero .hero-article h1 {
   margin-top: 0;
   margin-bottom: var(--spacing-md);
 }
@@ -259,11 +286,7 @@ img {
   margin: 0;
 }
 
-/* 임시 - 카드 링크 모음 */
-.link-cards {
-  padding: var(--spacing-lg) var(--spacing-md);
-}
-
+/* LINK-CARDS */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -284,8 +307,8 @@ img {
   border-radius: var(--spacing-sm);
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   color: var(--color-text-main);
 }
 
