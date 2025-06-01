@@ -14,19 +14,15 @@
   --color-bg-default: #f9f9f9;
   --color-bg-gray: #e0e0e0;
   --color-bg-lightgray: #f2f2f2;
-  --color-bg-subtle: #d8ecf4;
-  --color-bg-dark: #212936;
 
   --color-primary: #3a7ca5;
   --color-primary-dark: #2c5e83;
   --color-primary-light: #d8ecf4;
 
-  --color-accent: #8e9aaf; /* 보조 포인트 (퍼플-그레이 톤) */
-  /* or --color-accent: #6da39c; */ /* 보조 포인트를 민트톤으로 바꾸고 싶다면 */
+  --color-accent: #8e9aaf;
 
   --color-border-default: #e0e0e0;
 
-  /* 상태 색상 */
   --color-success: #5cb85c;
   --color-warning: #f0ad4e;
   --color-danger: #d9534f;
@@ -267,7 +263,7 @@ img {
   margin-bottom: var(--spacing-md);
 }
 
-.hero img {
+.hero-img {
   border-radius: 0.3rem 0.3rem 0 0;
 }
 
@@ -303,7 +299,7 @@ img {
   padding: var(--spacing-lg) var(--spacing-md);
   text-align: center;
   text-decoration: none;
-  background-color: var(--color-bg-lightgray);
+  border: 0.1rem solid var(--color-border-default);
   border-radius: var(--spacing-sm);
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
   transition:
@@ -326,7 +322,8 @@ img {
 .card-link:hover {
   transform: translateY(-0.25rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-bg-gray);
+  /* background-color: var(--color-accent); */
 }
 
 /* FOOTER */
